@@ -5,11 +5,6 @@ import './home.css'
 import Navbar from './navbar'
 import Hero from './hero'
 
-// styles
-const pageStyles = {
-    fontFamily: "Poppins, -apple-system, Roboto, sans-serif, serif",
-}
-
 // markup
 const HomePage = () => {
     return (
