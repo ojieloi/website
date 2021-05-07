@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='nav'>
             {/* Logo */}
-            <a className='logo' href='home'>Ik.</a>
+            <a className='logo' href='/'>Ik.</a>
 
             {/* Navbar links */}
             {/* Home, Behance, Dribbble, Resume */}
