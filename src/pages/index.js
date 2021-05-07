@@ -1,9 +1,5 @@
 import * as React from "react"
-import './index.css'
-
-// Components
-import Navbar from '../components/navbar'
-import Hero from '../components/hero'
+import HomePage from "../components/home"
 
 // styles
 const pageStyles = {
@@ -14,21 +10,8 @@ const pageStyles = {
 const IndexPage = () => {
     return (
         <main style={pageStyles}>
-            <title>Ik.</title>
-
-            {/* Page container */}
-            <div className='container'>
-
-                {/* Navbar Component */}
-                <Navbar />
-
-                <div className='content'>
-
-                    {/* Hero Component */}
-                    <Hero />
-
-                </div>
-            </div>
+            <title>Home Page</title>
+            <HomePage />
         </main>
     )
 }
