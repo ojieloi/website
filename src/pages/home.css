@@ -1,0 +1,24 @@
+*::selection {
+    background: #e7dff7;
+}
+
+.container {
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(99vh - 100px);
+}
+
+/* Max Width */
+@media only screen and (max-width: 700px) {
+    .container {
+        padding: 0 25px;
+    }
+}
