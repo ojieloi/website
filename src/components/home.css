@@ -15,11 +15,11 @@
     height: calc(100vh - 100px);
 }
 
-@media screen and (max-height: 500px) {
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
     .container .content {
-        /* height: 100vh; */
-        min-height: -webkit-fill-available;
+        height: -webkit-fill-available;
     }
-} 
+}
 
 
