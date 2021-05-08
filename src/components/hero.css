@@ -1,16 +1,9 @@
 .hero-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: auto;
-}
-
-.profile-pic {
-    background-image: url('../images/profile_pic.png') no-repeat;
-    background-position: center;
-    height: 198px;
-    width: 198px;
+    justify-content: space-between;
 }
 
 h1 {
@@ -20,7 +13,6 @@ h1 {
     text-align: center;
     max-width: 540px;
     line-height: 80px;
-    margin-bottom: 30px;
 }
 
 mark {
@@ -34,7 +26,6 @@ p {
     text-align: center;
     max-width: 650px;
     line-height: 40px;
-    margin-bottom: 80px;
 }
 
 span.name {
@@ -51,7 +42,7 @@ a.resume-link {
     font-size: 14px;
     font-weight: 500;
     padding: 15px 34px;
-    transition: all 0.1s ease-out;
+    transition: all 0.15s ease-out;
 }
 
 a.resume-link:hover {
@@ -64,26 +55,41 @@ a.resume-link:active:hover {
     transform: scale(0.9);
 }
 
-/* Max Width */
-@media only screen and (max-width: 550px) {
+/* Media Queries */
+@media screen and (max-width: 550px) {
     h1 {
-        font-size: 28px;
+        font-size: 30px;
         line-height: 60px;
-        margin-bottom: 20px;
-        max-width: 100%;
     }
 
     p {
-        font-size: 14px;
+        font-size: 1rem;
         line-height: 35px;
-        margin-bottom: 50px;
-        max-width: 100%;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    p {
+        margin: 7vh 0px;
     }
 
-    span.name {
-        font-size: 16px;
+    .hero-container {
+        padding: 7vh 0px;
+    }
+}
+
+@media screen and (min-height: 500px) {
+    .hero-container {
+        justify-content: center;
     }
 
+    p {
+        margin: 7vh 0px;
+    }
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
     a.resume-link {
         border: 2px solid #662FDB;
         padding: 15px 47px;
