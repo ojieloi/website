@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SiBehance, SiGithub, SiLinkedin } from "react-icons/si"
+import { SiBehance, SiGithub, SiInstagram, SiLinkedin } from "react-icons/si"
 import './navbar.css'
 
 const Navbar = () => {
@@ -11,9 +11,10 @@ const Navbar = () => {
             {/* Navbar links */}
             {/* Home, Behance, Dribbble, Resume */}
             <div className='right-nav'>
-                <a className='behance' href='https://github.com/ojieloi' target="_blank" rel='noreferrer' aria-label='Open GitHub'><SiGithub /></a>
-                <a className='dropbox' href='https://www.behance.net/ikeojielo' target="_blank" rel='noreferrer' aria-label='Open Behance'><SiBehance /></a>
-                <a className='behance' href='https://www.linkedin.com/in/ikecojielo/' target="_blank" rel='noreferrer' aria-label='Open LinkedIn'><SiLinkedin /></a>
+                <a href='https://www.instagram.com/oeki_ikeo/' target="_blank" rel='noreferrer' aria-label='Open Instagram'><SiInstagram /></a>
+                <a href='https://github.com/ojieloi' target="_blank" rel='noreferrer' aria-label='Open GitHub'><SiGithub /></a>
+                <a href='https://www.behance.net/ikeojielo' target="_blank" rel='noreferrer' aria-label='Open Behance'><SiBehance /></a>
+                <a href='https://www.linkedin.com/in/ikecojielo/' target="_blank" rel='noreferrer' aria-label='Open LinkedIn'><SiLinkedin /></a>
             </div>
         </div>
     )

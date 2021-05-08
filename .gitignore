@@ -1,6 +1,3 @@
 node_modules/
 .cache/
 public
-package.json
-package-lock.json
-gatsby-config.js
