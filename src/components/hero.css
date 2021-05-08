@@ -1,9 +1,9 @@
 .hero-container {
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* padding: 12vh 0px; */
 }
 
 h1 {
@@ -26,6 +26,7 @@ p {
     text-align: center;
     max-width: 650px;
     line-height: 40px;
+    margin: 7vh 0px;
 }
 
 span.name {
@@ -68,32 +69,16 @@ a.resume-link:active:hover {
     }
 }
 
-@media screen and (max-height: 500px) {
-    p {
-        margin: 7vh 0px;
-    }
-
-    .hero-container {
-        padding: 12vh 0px;
-    }
-}
-
-@media screen and (min-height: 500px) {
-    .hero-container {
-        justify-content: center;
-    }
-
-    p {
-        margin: 7vh 0px;
-    }
-}
-
 /* smartphones, touchscreens */
 @media (hover: none) and (pointer: coarse) {
     a.resume-link {
         border: 2px solid #662FDB;
         padding: 15px 47px;
         filter: drop-shadow(0px 5px 10px rgba(130, 81, 234, 0.25));
+    }
+
+    .hero-container {
+        padding: 10vh 0px;
     }
 }
 
