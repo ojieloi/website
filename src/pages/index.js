@@ -10,7 +10,7 @@ const pageStyles = {
 const IndexPage = () => {
     return (
         <main style={pageStyles}>
-            <title>Home Page</title>
+            <title>Ik Ojielo</title>
             <HomePage />
         </main>
     )
