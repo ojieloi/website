@@ -4,7 +4,6 @@ import HomePage from "../components/home"
 // styles
 const pageStyles = {
     fontFamily: "Poppins, -apple-system, Roboto, sans-serif, serif",
-    backgroundColor: "#F6F9FF",
 }
 
 // markup
