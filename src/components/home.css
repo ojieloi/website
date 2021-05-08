@@ -16,12 +16,12 @@
     align-items: center;
     justify-content: center;
     height: calc(100vh - 100px);
-    height: calc(-webkit-fill-available - 100px);
+    height: -webkit-fill-available;
 }
 
 @media (hover: none) and (pointer: coarse) {
     .container .content {
-        height: calc(-webkit-fill-available - 100px);
+        height: -webkit-fill-available;
     }
 }
 
