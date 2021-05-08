@@ -1,9 +1,9 @@
 .hero-container {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 12vh 0px; */
 }
 
 h1 {
@@ -36,7 +36,7 @@ span.name {
 }
 
 a.resume-link {
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     border: 2px solid #e7e7e7;
     border-radius: 8px;
     color: #232323;
@@ -57,15 +57,30 @@ a.resume-link:active:hover {
 }
 
 /* Media Queries */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     h1 {
-        font-size: 30px;
-        line-height: 60px;
+        font-size: 38px;
+        line-height: 63px;
+        max-width: 450px;
     }
 
     p {
         font-size: 1rem;
         line-height: 35px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 30px;
+        line-height: 60px;
+        max-width: 360px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .hero-container {
+        padding: 12vh 0px;
     }
 }
 
@@ -81,5 +96,3 @@ a.resume-link:active:hover {
         padding: 10vh 0px;
     }
 }
-
-
