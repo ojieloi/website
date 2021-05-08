@@ -17,8 +17,6 @@
     justify-content: center;
     height: calc(100vh - 100px);
     height: calc(-webkit-fill-available - 100px);
-
-    border: 1px dashed blue;
 }
 
 @media (hover: none) and (pointer: coarse) {
