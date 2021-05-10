@@ -2,7 +2,8 @@ module.exports = {
     siteMetadata: {
         title: "Website - Portfolio",
         siteUrl: "https://ikojielo.gatsbyjs.io/",
-        description: `My personal website that acts as a hub for all my social and professional links. From LinkedIn, to my GitHub.`,
+        description: "My personal website, with links to my social and professionl site. From LinkedIn to Behance and GitHub.",
+        lang: "en",
     },
     plugins: [
         "gatsby-plugin-styled-components",
@@ -11,6 +12,7 @@ module.exports = {
         "gatsby-plugin-sitemap",
         "gatsby-plugin-mdx",
         "gatsby-plugin-sharp",
+        "gatsby-plugin-react-helmet",
         "gatsby-transformer-sharp",
         {
             resolve: "gatsby-source-filesystem",
