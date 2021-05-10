@@ -22,9 +22,11 @@ function SEO({ title, description, lang, meta }) {
 
     return (
         <Helmet
+            titleAttributes={{
+                title,
+            }}
             htmlAttributes={{
                 lang,
-                title,
             }}
             meta={[
                 {
