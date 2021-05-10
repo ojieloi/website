@@ -2,6 +2,7 @@ module.exports = {
     siteMetadata: {
         title: "Website - Portfolio",
         siteUrl: "https://ikojielo.gatsbyjs.io/",
+        description: `My personal website that acts as a hub for all my social and professional links. From LinkedIn, to my GitHub.`,
     },
     plugins: [
         "gatsby-plugin-styled-components",
