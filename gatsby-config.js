@@ -1,6 +1,6 @@
 module.exports = {
     siteMetadata: {
-        title: "Website - Portfolio",
+        title: "Ik Ojielo - Website",
         siteUrl: "https://ikojielo.gatsbyjs.io/",
         description: "My personal website, with links to my social and professionl site. From LinkedIn to Behance and GitHub.",
     },

@@ -37,6 +37,7 @@ function SEO({ title, description, lang, meta }) {
 }
 
 SEO.defaultProps = {
+    title: `Ik Ojielo - Website`,
     lang: `en`,
     meta: [],
     description: `My personal website, with links to my social and professionl sites. From LinkedIn to Behance and GitHub.`,
