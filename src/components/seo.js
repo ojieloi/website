@@ -1,8 +1,9 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta }) {
+function SEO({ title, description, lang, meta }) {
     const { site } = useStaticQuery(
         graphql`
       query {
@@ -35,10 +36,16 @@ function SEO({ description, lang, meta }) {
 }
 
 SEO.defaultProps = {
-    title: `Ik Ojielo - Website`,
     lang: `en`,
     meta: [],
     description: `My personal website, with links to my social and professionl sites. From LinkedIn to Behance and GitHub.`,
+}
+
+SEO.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    lang: PropTypes.string,
+    meta: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default SEO
