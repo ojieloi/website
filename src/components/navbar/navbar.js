@@ -12,7 +12,6 @@ const Navbar = () => {
     return (
         <nav className='navbar'>
             <div className='navbar-content'>
-
                 {/* Logo */}
                 <ul className='brand' style={ListStyle}>
                     <li><a className='logo' href='/' aria-label='Go Home'>Ik.</a></li>
