@@ -5,7 +5,6 @@ import ProfilePic from '../../images/profile_picture.jpg'
 const Hero = () => {
     return (
         <section className='hero'>
-
             {/* Header */}
             <div className='header'>
                 <h1>Hi there,</h1>

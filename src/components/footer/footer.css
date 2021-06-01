@@ -6,8 +6,7 @@
 }
 
 .footer {
-    margin: 50px auto;
-    border: 1px solid red;
+    margin: 50px auto 0;
 }
 
 .footer-content {
@@ -38,11 +37,31 @@
     transition: all 75ms linear;
 }
 
-.footer-content a:hover {
-    opacity: 0.5;
+/* GitHub */
+.footer-content #github:hover {
+    color: #0366d6;
+}
+
+/* Behance */
+.footer-content #behance:hover {
+    color: #fac100;
+}
+
+/* LinkedIn */
+.footer-content #linkedin:hover {
+    color: #2867B2;
+}
+
+/* Instagram */
+.footer-content #instagram:hover {
+    color: #C13584;
 }
 
 @media (max-width: 850px) {
+    .footer {
+        margin: 5vw auto 0;
+    }
+    
     .footer-content a {
         font-size: 1.5rem;
     }
