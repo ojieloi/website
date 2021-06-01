@@ -6,7 +6,8 @@
 }
 
 .footer {
-    margin: 50px 0 100px;
+    margin: 50px auto;
+    border: 1px solid red;
 }
 
 .footer-content {
@@ -38,13 +39,13 @@
 }
 
 .footer-content a:hover {
-    opacity: 0.75;
+    opacity: 0.5;
 }
 
-.footer-content p {
-    margin-bottom: 2rem;
-    opacity: 0.4;
-    text-align: center;
+@media (max-width: 850px) {
+    .footer-content a {
+        font-size: 1.5rem;
+    }
 }
 
 

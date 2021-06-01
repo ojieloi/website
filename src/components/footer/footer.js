@@ -1,7 +1,8 @@
 import * as React from 'react'
 import './footer.css'
 
-import { FaBehance, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FiGithub, FiInstagram, FiLinkedin, } from 'react-icons/fi'
+import { RiBehanceLine } from 'react-icons/ri'
 
 const Footer = () => {
     const ListStyle = {
@@ -12,16 +13,18 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <div className='footer-content'>
-
-                {/* Header */}
-                <p>Social Links</p>
-
-                {/* Navbar links */}
                 <ul className='nav-links' style={ListStyle}>
-                    <li><a id='link' aria-label='Open Github' href='https://github.com/ojieloi' target='_blank' rel='noreferrer'><FaGithub /></a></li>
-                    <li><a id='link' aria-label='Open Behance' href='https://www.behance.net/ikeojielo' target='_blank' rel='noreferrer'><FaBehance /></a></li>
-                    <li><a id='link' aria-label='Open LinkedIn' href='https://www.linkedin.com/in/ikecojielo/' target='_blank' rel='noreferrer'><FaLinkedin /></a></li>
-                    <li><a id='link' aria-label='Open Instagram' href='https://www.instagram.com/oeki_ikeo/' target='_blank' rel='noreferrer'><FaInstagram /></a></li>
+                    {/* GitHub */}
+                    <li><a id='link' aria-label='Open Github' href='https://github.com/ojieloi' target='_blank' rel='noreferrer'><FiGithub /></a></li>
+
+                    {/* Behance */}
+                    <li><a id='link' aria-label='Open Behance' href='https://www.behance.net/ikeojielo' target='_blank' rel='noreferrer'><RiBehanceLine /></a></li>
+
+                    {/* LinkedIn */}
+                    <li><a id='link' aria-label='Open LinkedIn' href='https://www.linkedin.com/in/ikecojielo/' target='_blank' rel='noreferrer'><FiLinkedin /></a></li>
+
+                    {/* Instagram */}
+                    <li><a id='link' aria-label='Open Instagram' href='https://www.instagram.com/oeki_ikeo/' target='_blank' rel='noreferrer'><FiInstagram /></a></li>
                 </ul>
             </div>
         </footer>

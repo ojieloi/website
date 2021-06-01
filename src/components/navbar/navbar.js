@@ -20,8 +20,7 @@ const Navbar = () => {
 
                 {/* Navbar links */}
                 <ul className='nav-links' style={ListStyle}>
-                    <li><a id='link' className='active' aria-label='About me' href='/#about'>About</a></li>
-                    <li><a id='link' aria-label='Open resume' href={Resume} target='_blank' rel='noreferrer'>Resume</a></li>
+                    <li><a id='resume-link' aria-label='Open resume' href={Resume} target='_blank' rel='noreferrer'>Resume</a></li>
                 </ul>
             </div>
         </nav>

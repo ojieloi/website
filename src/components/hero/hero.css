@@ -65,6 +65,7 @@
     max-height: 500px;
     max-width: 100%;
     transition: all 150ms linear;
+    width: 100%;
 }
 
 .profile-picture:hover img {
@@ -89,7 +90,6 @@
     cursor: default;
     font-size: 1.25rem;
     font-weight: 500;
-    opacity: 0.85;
     position: absolute;
     transition: all 150ms linear;
 }
