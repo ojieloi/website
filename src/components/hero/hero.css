@@ -1,0 +1,147 @@
+/* Center aligning all section divs */
+.hero, .header, .bio-section, a#resume, .picture-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hero Container */
+.hero {
+    border-bottom: 2px solid #f5f5f5;
+    color: #313131;
+    margin: 100px auto 100px;
+}
+
+/* Header Section */
+.header {
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.header h1:nth-of-type(1) {
+    background: -webkit-linear-gradient(#EA51D1, #8251EA);
+    background-clip: text;
+    margin-bottom: 10px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Bio Section */
+.bio {
+    margin: 0 auto 100px;
+    max-width: 736px;
+}
+
+.bio p {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* Profile Picture Section */
+.profile-picture {
+    border-radius: 12px;
+    margin: 100px auto 100px;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    transition: all 150ms linear;
+}
+
+.profile-picture:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.profile-picture img {
+    border-radius: 12px;
+    height: 100%;
+    max-height: 500px;
+    max-width: 100%;
+    transition: all 150ms linear;
+}
+
+.profile-picture:hover img {
+    transform: scale(1.05);
+}
+
+.profile-picture .picture-content {
+    background: linear-gradient(transparent, #313131c0);
+    border-radius: 12px;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    transition: all 150ms linear;
+    width: 100%;
+}
+
+.profile-picture .picture-content p {
+    bottom: -2rem;
+    color: #ffffff;
+    cursor: default;
+    font-size: 1.25rem;
+    font-weight: 500;
+    opacity: 0.85;
+    position: absolute;
+    transition: all 150ms linear;
+}
+
+.profile-picture:hover .picture-content {
+    opacity: 1;
+}
+
+.profile-picture:hover .picture-content p {
+    bottom: 1rem;
+}
+
+@media (max-width: 850px) {
+    .hero {
+        color: #313131;
+        margin: 7vw auto 7vw;
+    }
+
+    .bio {
+        margin: 0 auto 7vw;
+    }
+
+    .bio p {
+        font-size: 1.15rem;
+        line-height: 2.8rem;
+    }
+
+    .profile-picture {
+        margin: 7vw auto 7vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .header h1 {
+        font-size: 3.3rem;
+    }
+
+    .header h1:nth-of-type(1) {
+        margin-bottom: 5px;
+    }
+
+    .bio p {
+        font-size: 1rem;
+        line-height: 2.5rem;
+    }
+
+    .profile-picture .picture-content p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+

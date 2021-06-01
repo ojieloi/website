@@ -1,0 +1,21 @@
+*::selection {
+    background: #8151ea2c;
+    color: #313131;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 50px 100px;
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        padding: 5vw 16px 7vw;
+    }
+}
