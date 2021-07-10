@@ -1,6 +1,5 @@
 import * as React from 'react'
 import HomePage from '../components/home/home'
-// import SEO from '../components/seo'
 import './index.css'
 
 // markup
