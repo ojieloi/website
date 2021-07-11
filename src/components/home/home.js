@@ -38,7 +38,7 @@ const HomePage = () => {
                 <div className="hero-links">
                     <TextLink href="mailto:ojieloi@gmail.com" target="_blank" rel="noreferrer">Email</TextLink>
                     <TextLink href="https://www.linkedin.com/in/ikecojielo/" target="_blank" rel="noreferrer">LinkedIn</TextLink>
-                    <TextLink href="https://github.com/ojieloi" target="_blank" rel="noreferrer">Github</TextLink>
+                    <TextLink href="https://github.com/ojieloi" target="_blank" rel="noreferrer">GitHub</TextLink>
                     <TextLink href="https://www.behance.net/ikeojielo" target="_blank" rel="noreferrer">Behance</TextLink>
                 </div>
             </div>
@@ -48,7 +48,7 @@ const HomePage = () => {
             <div className="exp">
                 <div className="exp-header">
                     <Header>Experience</Header>
-                    <Description>Learn more about what I've been up to so far</Description>
+                    <Description>Learn more about what I've been up to</Description>
                 </div>
 
                 <div className="exp-list">
@@ -64,7 +64,7 @@ const HomePage = () => {
                             <div className="exp-list-item">
                                 <H1>Heali AI</H1>
                                 <H1 style={{ color: 'rgb(198, 127, 69)' }}>UI/UX Designer</H1>
-                                <Description style={{ color: '#878787', fontStyle: 'italic', fontWeight: 500 }}>Nov 2020 - Jun 2020</Description>
+                                <Description style={{ color: '#878787', fontStyle: 'italic', fontWeight: 500 }}>Nov 2020 - Jun 2021</Description>
                                 <Description>Developed UI mockups and prototypes for new ideas that clearly illustrated how app will look and function. Gathered and evaluated user requirements in collaboration with product managers and UX researchers. Delivered UI specifications, wireframes, and prototypes across product design and engineering teams.</Description>
                             </div>
                         </li>
