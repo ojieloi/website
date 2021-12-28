@@ -1,0 +1,29 @@
+
+/* Wrapper */
+.dg-w-wrapper {
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 40px;
+    display: flex;
+    height: 300px;
+}
+
+.dg-w-image-container {
+    margin: 0px 45px;
+}
+
+.dg-w-image img {
+    border-radius: 5rem;
+    height: 130px;
+    width: 130px;
+}
+
+.dg-w-body-container {
+    margin-right: 40px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .dg-w-wrapper {
+        background-color: rgb(40, 40, 50);
+    }
+}

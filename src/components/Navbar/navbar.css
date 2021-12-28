@@ -1,0 +1,79 @@
+/* Pressdown Animation */
+@keyframes pressDown {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+/* Navbar Wrapper */
+.navbar-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Navbar Container */
+.navbar-container {
+    align-items: center;
+    background-color: #EBE8EA;
+    border-radius: 15px;
+    display: flex;
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+    position: relative;
+}
+
+/* Navbar Element */
+.navbar-element {
+    background: none;
+    color: #B9B9B9;
+    border-radius: 8px;
+    padding: 8px 14px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Navbar Element - Active */
+.navbar-element.active {
+    animation: pressDown 0.3s;
+    color: #000;
+}
+
+/* Navbar Element - Hover */
+.navbar-element:hover {
+    cursor: pointer;
+}
+
+/* Navbar Element - Active Marker */
+.navbar-container #marker {
+	background-color:#FFF;
+    border-radius: 8px;
+	bottom: 8px;
+    height: 33px;
+	left: 8px;
+    position: absolute;
+	transition: all 0.2s ease-in-out 0.1s;
+    width: 68.17px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    .navbar-container {
+        background-color: rgb(40, 40, 50);
+    }
+
+    .navbar-element {
+        color: #B9B9B9AF;
+    }
+
+    .navbar-element.active {
+        color: rgb(235, 235, 235);
+    }
+
+    .navbar-container #marker {
+        background-color: rgb(50, 50, 60);
+    }
+}

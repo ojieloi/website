@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 
-*::selection {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+
+/* *::selection {
   background: #e7e7e7;
-}
+} */
 
 * {
   margin: 0;
@@ -15,8 +17,8 @@ html {
 }
 
 body {
-  background-color: #f7f7f7;
-  font-family: "Inter", sans-serif;
+  background-color: #F7F2F1;
+  font-family: "DM Sans", sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -24,11 +26,11 @@ body {
 
 /* Dark Preference */
 @media (prefers-color-scheme: dark) {
-  *::selection {
+  /* *::selection {
     background: #3e3c49;
-  }
+  } */
   
   body {
-    background-color: #201f25;
+    background-color: rgb(30, 30, 40);
   }
 }
