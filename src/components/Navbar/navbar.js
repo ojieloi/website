@@ -28,9 +28,9 @@ const Navbar = () => {
         <nav className="navbar-wrapper">
             <div className="navbar-container" onClick={handleClick} onKeyDown={handleClick} role="menuitem" tabIndex="-1">
                 <div id="marker"></div>
-                <a href={HomePage} className="navbar-element active" id="home" tabIndex="-0">Home</a>
-                <a href={HomePage} className="navbar-element" id="about" tabIndex="-0">About</a>
-                <a href={HomePage} className="navbar-element" id="exp" tabIndex="-0">Experience</a>
+                <a href={HomePage} className="navbar-element active" id="home" tabIndex="0">Home</a>
+                <a href={HomePage} className="navbar-element" id="about" tabIndex="0">About</a>
+                <a href={HomePage} className="navbar-element" id="exp" tabIndex="0">Experience</a>
             </div>
         </nav>
     )

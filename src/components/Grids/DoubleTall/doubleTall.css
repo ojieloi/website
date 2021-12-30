@@ -39,3 +39,17 @@
         color: #98A9BB;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .dt-container .dt-one {
+        padding: 50px 30px 0px;
+    }
+    
+    .dt-container .dt-two {
+        padding: 50px 30px;
+    }
+    
+    .dt-container .dt-three {
+        padding: 0px 30px 50px;
+    }
+}
