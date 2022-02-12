@@ -1,0 +1,23 @@
+.about-me {
+  padding: 100px 30px 50px;
+}
+
+.about-me__wrapper {
+  margin: auto;
+  max-width: 520px;
+}
+
+.about-me__body {
+  color: #26394F;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .about-me {
+    padding: 200px 60px 100px;
+  }
+
+  .about-me__wrapper {
+    max-width: 850px;
+  }
+}
