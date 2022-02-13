@@ -4,8 +4,9 @@ import ContactMe from "../ContactMe/contactme";
 import Education from "../Education/education";
 import Footer from "../Footer/footer";
 import Hero from "../Hero/hero";
+import Salesforce from "../Salesforce/salesforce";
 import Skills from "../Skills/skills";
-import Work from "../Works/work";
+import Work from "../Work/work";
 import "./home.css";
 
 const HomePage = () => {
@@ -14,10 +15,11 @@ const HomePage = () => {
       <div className="home-wrapper">
           <Hero />
           <AboutMe />
-          <ContactMe />
           <Education />
           <Work />
           <Skills />
+          <Salesforce />
+          <ContactMe />
           <Footer />
       </div>
     </div>

@@ -46,7 +46,6 @@
 
 .skills-wrapper__dev {
   background-image: url("../../images/develop.jpeg");
-  /* margin-top: 100px; */
 }
 
 .skills-wrapper__text-wrapper {
@@ -121,5 +120,17 @@
 
   .skills-wrapper__gray-bg {
     height: 65%;
+  }
+}
+
+@media (pointer: coarse) {
+  .skills-wrapper__header {
+    margin: auto 0px 20px;
+    position: relative;
+    transition: none;
+  }
+
+  .skills-wrapper__body {
+    opacity: 1;
   }
 }

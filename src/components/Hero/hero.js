@@ -11,10 +11,10 @@ const Hero = () => {
       <div className="hero-wrapper">
         <div className="hero-wrapper__text-wrapper">
           <Header className="hero-wrapper__header">
-            Hi, I'm Ik.
-            <span className="hero-wrapper__underlined">
+            Hi, I'm <span className="hero-wrapper__underlined">Ik.</span>
+            {/* <span className="hero-wrapper__underlined">
               <img src={Underline} alt="" />
-            </span>
+            </span> */}
           </Header>
           <Body className="hero-wrapper__body">
             A UI Designer and Front End Developer from New Jersey. I’m

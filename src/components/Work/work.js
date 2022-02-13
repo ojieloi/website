@@ -15,7 +15,7 @@ const Work = () => {
             also dabble with React JS and Bloomreach, depending on the project
             and the client’s needs.
           </Body>
-          <Link href="" aria-label="open site">Learn More</Link>
+          <Link href="https://www.shift7digital.com/" target="_blank" aria-label="open site">Learn More</Link>
         </div>
         <div className="work-wrapper__right">
           <Header>Work</Header>
