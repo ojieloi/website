@@ -19,10 +19,10 @@ const Education = () => {
         <div className="education-wrapper__right">
           <Body className="education-wrapper__right-body">
             Graduated in the Spring of 2021 after spending the last year and a
-            half learning remotely due to COVID. Most of the learning experiences
-            that have carried over, came from this last stretch where I took
-            upon multiple developement projects that honed my skills in the
-            industry I find myself working in currently.
+            half learning remotely due to COVID. Most of the learning
+            experiences that have carried over, came from this last stretch
+            where I took upon multiple developement projects that honed my
+            skills in the industry I find myself working in currently.
           </Body>
         </div>
       </div>

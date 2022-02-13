@@ -4,6 +4,8 @@ import ContactMe from "../ContactMe/contactme";
 import Education from "../Education/education";
 import Footer from "../Footer/footer";
 import Hero from "../Hero/hero";
+import Skills from "../Skills/skills";
+import Work from "../Works/work";
 import "./home.css";
 
 const HomePage = () => {
@@ -14,6 +16,8 @@ const HomePage = () => {
           <AboutMe />
           <ContactMe />
           <Education />
+          <Work />
+          <Skills />
           <Footer />
       </div>
     </div>

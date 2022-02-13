@@ -4,7 +4,6 @@
   background-repeat: repeat-x;
   background-size: cover;
   padding: 50px 30px 150px;
-  position: relative;
 }
 
 .education-wrapper {
@@ -50,7 +49,7 @@
 @media (min-width: 900px) {
   .education-wrapper {
     flex-direction: row;
-    gap: min(5vw, 100px);
+    gap: min(10vw, 200px);
   }
 }
 

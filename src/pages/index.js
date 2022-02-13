@@ -1,10 +1,7 @@
 import * as React from 'react';
+import HomePage from '../components/home/home';
 import './index.css';
 
-// Components
-import HomePage from '../components/home/home';
-
-// markup
 const IndexPage = () => {
     return (
         <main className='main'>
