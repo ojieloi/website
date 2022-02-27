@@ -1,8 +1,6 @@
 .hero {
   background-color: #26394F;
-  padding: 150px 30px;
-
-  border: 2px dashed red;
+  padding: 100px 30px;
 }
 
 .hero-wrapper {
@@ -11,8 +9,6 @@
   flex-direction: column-reverse;
   margin: auto;
   max-width: 520px;
-
-  border: 2px dashed blue;
 }
 
 .hero-wrapper__text-wrapper {
@@ -33,11 +29,6 @@
 .hero-wrapper__underlined {
   background: url("../../images/underline.svg") no-repeat bottom;
   display: inline-block;
-  /* position: absolute; */
-  /* right: -13px; */
-  /* top: 100% ; */
-
-  /* border: 2px dashed red; */
 }
 
 .hero-wrapper__body {
@@ -45,10 +36,9 @@
 }
 
 .hero-wrapper__image {
-  max-height: 400px;
-  /* max-width: 300px; */
+  max-height: 300px;
   object-fit: cover;
-  object-position: bottom center;
+  object-position: center center;
 }
 
 @media (min-width: 768px) {
@@ -66,8 +56,6 @@
   }
 
   .hero-wrapper__image {
-    /* max-width: 300px; */
-    /* width: auto; */
     max-height: 350px;
   }
 

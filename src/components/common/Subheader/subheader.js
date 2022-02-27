@@ -6,6 +6,10 @@ const Subheader = styled.h3`
   font-weight: 400;
   line-height: 47px;
   padding: 0px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 export default Subheader;

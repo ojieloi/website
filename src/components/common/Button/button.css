@@ -19,3 +19,9 @@
   font-weight: 700 !important;
   transition: none !important;
 }
+
+@media (prefers-reduced-motion) {
+  .button__wrapper {
+    transition: none !important;
+  }
+}

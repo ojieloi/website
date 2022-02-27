@@ -2,7 +2,6 @@ import * as React from "react";
 import Body from "../common/Body/body";
 import Header from "../common/Header/header";
 import Memoji from "../../images/memoji.svg";
-import Underline from "../../images/underline.svg";
 import "./hero.css";
 
 const Hero = () => {
@@ -12,9 +11,6 @@ const Hero = () => {
         <div className="hero-wrapper__text-wrapper">
           <Header className="hero-wrapper__header">
             Hi, I'm <span className="hero-wrapper__underlined">Ik.</span>
-            {/* <span className="hero-wrapper__underlined">
-              <img src={Underline} alt="" />
-            </span> */}
           </Header>
           <Body className="hero-wrapper__body">
             A UI Designer and Front End Developer from New Jersey. I’m
@@ -23,7 +19,7 @@ const Hero = () => {
           </Body>
         </div>
         <div className="hero-wrapper__image-wrapper">
-          <img className="hero-wrapper__image" src={Memoji} alt="hero cover" />
+          <img className="hero-wrapper__image" src={Memoji} alt="Memoji" />
         </div>
       </div>
     </div>
