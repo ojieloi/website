@@ -1,0 +1,33 @@
+.contact-me {
+  padding: 100px 30px;
+}
+
+.contact-me__wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.contact-me__body {
+  color: #26394F;
+  margin: 20px 0px 50px;
+}
+
+.contact-me__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .contact-me {
+    padding: 150px 0px;
+  }
+
+  .contact-me__buttons {
+    flex-wrap: nowrap;
+  }
+}

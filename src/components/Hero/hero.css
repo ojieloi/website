@@ -1,0 +1,67 @@
+.hero {
+  background-color: #26394F;
+  padding: 100px 30px;
+}
+
+.hero-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  margin: auto;
+  max-width: 520px;
+}
+
+.hero-wrapper__text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 520px;
+  text-align: center;
+}
+
+.hero-wrapper__header {
+  color: #FFF;
+  margin-bottom: 40px;
+  max-width: max-content;
+  position: relative;
+}
+
+.hero-wrapper__underlined {
+  background: url("../../images/underline.svg") no-repeat bottom;
+  display: inline-block;
+}
+
+.hero-wrapper__body {
+  color: #FFF;
+}
+
+.hero-wrapper__image {
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 150px 60px;
+  }
+
+  .hero-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: min(2vw, 100px);
+    max-height: min-content;
+    max-width: fit-content;
+  }
+
+  .hero-wrapper__image {
+    max-height: 350px;
+  }
+
+  .hero-wrapper__text-wrapper {
+    justify-content: flex-start;
+    max-width: 520px;
+    text-align: left;
+  }
+}

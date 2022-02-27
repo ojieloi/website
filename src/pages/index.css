@@ -1,34 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+/* DM Sans Font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
-*::selection {
+/* Noto Serif Font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* *::selection {
   background: #e7e7e7;
-}
+} */
 
 * {
   margin: 0;
   padding: 0;
+  transition: all 0.2s;
 }
 
-html {
-  scroll-behavior: smooth;
-  transition: all 0.2s ease-out;
-}
-
-body {
-  background-color: #f7f7f7;
-  font-family: "Inter", sans-serif;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Dark Preference */
-@media (prefers-color-scheme: dark) {
-  *::selection {
-    background: #3e3c49;
-  }
-  
-  body {
-    background-color: #201f25;
+@media (prefers-reduced-motion) {
+  * {
+    transition: none;
   }
 }
