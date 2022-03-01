@@ -39,6 +39,7 @@
   max-height: 300px;
   object-fit: cover;
   object-position: center center;
+  filter: brightness(110%);
 }
 
 @media (min-width: 768px) {
