@@ -13,7 +13,7 @@ const Education = () => {
             New York Institute of Technology, 2021
           </Body>
           <Body className="education-wrapper__left-body">
-            Bacherlors, Computer Science | Cum Laude
+            Bachelors, Computer Science | Cum Laude
           </Body>
         </div>
         <div className="education-wrapper__right">
