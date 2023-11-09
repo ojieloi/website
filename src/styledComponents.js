@@ -17,8 +17,8 @@ export const SubheaderText = styled.h2`
 
 // body text
 export const BodyText = styled.p`
-  font-size: 14px;
-  color: ${Colors.gray};
-  font-weight: 700;
+  font-size: 13px;
+  color: ${Colors.textGray};
+  font-weight: 400;
   line-height: 24px;
 `;

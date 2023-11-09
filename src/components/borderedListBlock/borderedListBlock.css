@@ -1,0 +1,9 @@
+.bordered-list-block {
+  background-color: #fff;
+  border: 1px solid #f6f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 40px;
+}
