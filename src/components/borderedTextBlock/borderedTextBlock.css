@@ -1,8 +1,7 @@
 .bordered-text-block {
-  background-color: #fff;
-  border: 1px solid #f6f0f0;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 30px 40px;
+  gap: 10px;
+  /* padding: 30px 40px; */
 }

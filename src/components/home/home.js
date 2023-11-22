@@ -15,77 +15,136 @@ import { Colors } from "../../colors/colors";
 
 const HomePage = () => {
   return (
-    <Container maxWidth="md" sx={{ py: "40px" }}>
-      <Box>
-        <Stack direction={"column"}>
-          {/* page nav */}
-          <Navbar />
+    <Stack direction={"column"} gap={2}>
+      {/* page nav */}
+      <Navbar />
 
-          {/* home intro text */}
-          <TextBlock />
+      {/* home intro text */}
+      <TextBlock />
 
-          <div className="simple-grid">
-            {/* education */}
-            <BorderedTextBlock
-              data={{
-                color: Colors.yellow,
-                header: "New York Institute of Technology",
-                subheader: ["2016 - 2020", "Bachelors, Computer Science"],
-                content: `Graduated in the Spring of 2021 after spending the last year and a
+      <Box sx={{ py: 20 }}>
+        <Container maxWidth="md">
+          {/* education */}
+          <BorderedTextBlock
+            data={{
+              color: Colors.brownHeaderText,
+              alignItems: "center",
+              header: "New York Institute of Technology",
+              subheader: ["2016 - 2020", "Bachelors, Computer Science"],
+              content: `Graduated in the Spring of 2021 after spending the last year and a
                   half learning remotely due to COVID. Most of learning experiences
                   that have carried over, came from this last stretch where I took
                   upon multiple developement projects that honed my skills in this
                   industry I find myself working in currently.`,
-              }}
-            />
-
-            <div className="two-column-grid">
-              {/* salesforce certification */}
-              <BorderedTextBlock
-                data={{
-                  color: Colors.blue,
-                  header: "Salesforce Certified",
-                  subheader: ["Javascript Developer I"],
-                  content: `Completed the LWC Specialist super badge and passed the Javascript Developer I multiple choice proctored exam.`,
-                }}
-              />
-
-              {/* link to trailhead */}
-              <BorderedLinkBlock />
-            </div>
-          </div>
-
-          {/* transition text */}
-          <Box py={"100px"} textAlign={"center"}>
-            <HeaderText>wait.. there’s more 👇🏾</HeaderText>
-          </Box>
-
-          {/* transition text */}
-          <Box pb={"50px"} textAlign={"left"}>
-            <HeaderText>what I do..</HeaderText>
-          </Box>
-
-          <div className="two-column-grid">
-            <BorderedListBlock
-              data={{
-                header: "💻 Development",
-              }}
-            />
-
-            <BorderedListBlock
-              data={{
-                header: "👨🏾‍🎨 Design",
-              }}
-            />
-          </div>
-
-          {/* transition text */}
-          <Box py={"100px"} textAlign={"center"}>
-            <HeaderText>before you go 👋🏾</HeaderText>
-          </Box>
-        </Stack>
+            }}
+          />
+        </Container>
       </Box>
-    </Container>
+
+      <Box py={20} sx={{ backgroundColor: Colors.greenPageBackground }}>
+        <Container>
+          <Stack direction={"column"} gap={15} alignItems={"center"}>
+            <Container maxWidth="sm" sx={{ textAlign: "center" }}>
+              <HeaderText color={Colors.greenHeaderText}>
+                Some things I've learned along the way
+              </HeaderText>
+            </Container>
+
+            <BorderedListBlock
+              color={Colors.black}
+              // header={["👨🏾‍💻", "Development"]}
+              header={["Development"]}
+              id="dev"
+              items={[
+                "Angular",
+                "React",
+                "Bloomreach",
+                "Salesforce",
+                "Firebase",
+                "Git",
+                "Testing & Debugging",
+                "APIs",
+                "Feature Developement & Improvement",
+                "Application Developement",
+              ]}
+            />
+
+            <BorderedListBlock
+              color={Colors.black}
+              // header={["👨🏾‍🎨", "Design"]}
+              header={["Design"]}
+              id="des"
+              items={[
+                "Adobe XD",
+                "Figma",
+                "Invision Studio",
+                "Visual & Responsive Design",
+                "Wireframing",
+                "Prototyping",
+                "UI & UX Design",
+              ]}
+            />
+
+            <BorderedListBlock
+              color={Colors.black}
+              // header={["🗣️", "Soft Skills"]}
+              header={["Soft Skills"]}
+              id="softSkills"
+              items={[
+                "Communication",
+                "Problem Solving",
+                "Adaptability",
+                "Visual Thinking",
+                "Collaboration",
+                "Leadership",
+                "Patience",
+                "Time Management",
+              ]}
+            />
+
+            <BorderedListBlock
+              color={Colors.black}
+              // header={["🥅", "Goals"]}
+              header={["Goals"]}
+              id="goals"
+              items={["Improve soft skills", "Freelancing", "Learn Swift UI"]}
+            />
+          </Stack>
+        </Container>
+      </Box>
+
+      <Box sx={{ py: 10, backgroundColor: Colors.bluePageBackground }}>
+        <Container>
+          <div className="two-column-grid">
+            {/* salesforce certification */}
+            <BorderedTextBlock
+              data={{
+                bdColor: "#fff",
+                color: Colors.blueHeaderText,
+                header: "Salesforce Certified",
+                subheader: ["Javascript Developer I"],
+                content: `Completed the LWC Specialist super badge and passed the Javascript Developer I multiple choice proctored exam.`,
+              }}
+            />
+
+            {/* link to trailhead */}
+            <BorderedLinkBlock />
+          </div>
+        </Container>
+      </Box>
+
+      {/* transition text */}
+      {/* <Box py={"100px"} textAlign={"center"}>
+        <HeaderText>wait.. there’s more 👇🏾</HeaderText>
+      </Box> */}
+
+      {/* <div className="two-column-grid"></div> */}
+
+      {/* transition text */}
+      <Box py={"100px"} textAlign={"center"}>
+        <HeaderText>before you go 👋🏾</HeaderText>
+      </Box>
+    </Stack>
   );
 };
 

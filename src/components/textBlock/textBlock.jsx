@@ -11,11 +11,20 @@ const TextBlock = () => {
   var ReactRotatingText = require("react-rotating-text");
 
   return (
-    <Container>
-      <Box sx={{ px: 4, py: "50px" }}>
-        <Stack direction={"column"} spacing={1}>
+    <Box
+      sx={{
+        py: 20,
+        backgroundColor: Colors.redPageBackground,
+      }}
+    >
+      <Container maxWidth="md">
+        <Stack direction={"column"} spacing={2} alignItems={"center"}>
           <HeaderText>
-            <Stack direction={"row"} spacing={1}>
+            <Stack
+              direction={"row"}
+              spacing={1}
+              style={{ color: Colors.brownHeaderText }}
+            >
               {/* rotating text carousel */}
               <ReactRotatingText
                 items={["Hi, welcome", "Kedu", "Bonjour", "Hola"]}
@@ -27,14 +36,22 @@ const TextBlock = () => {
           </HeaderText>
 
           {/* content */}
-          <BodyText>
+          <BodyText
+            style={{ textAlign: "center", color: Colors.brownBodyText }}
+          >
             I’m Ik, a Front End Developer currently working at
             <Link
               className="text-block-link"
               component={"a"}
               href="https://www.shift7digital.com/"
               target="_blank"
-              sx={{ color: Colors.blue, marginLeft: "3px", fontWeight: 700, textDecoration: "none" }}>
+              sx={{
+                color: Colors.blue,
+                marginLeft: "3px",
+                fontWeight: 600,
+                textDecoration: "none",
+              }}
+            >
               Shift7, a Merkle Company
             </Link>
             . I also delve into some UI design from time to time. Both of these
@@ -42,8 +59,8 @@ const TextBlock = () => {
             turning these ideas into practical solutions.
           </BodyText>
         </Stack>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 

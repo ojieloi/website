@@ -5,17 +5,19 @@ import "./borderedLinkBlock.css";
 import trailheadLogo from "../../images/TrailheadLogo.svg";
 
 // comps
-import { Link, Tooltip } from "@mui/material";
+import { Link } from "@mui/material";
 
 const BorderedLinkBlock = () => {
   return (
-    <Tooltip title="Click to view Trailhead" followCursor={true}>
-      <section className="bordered-link-block">
-        <Link component={"button"} className="bordered-link-block__cta">
-          <img src={trailheadLogo} alt="TrailheadLogo" />
-        </Link>
-      </section>
-    </Tooltip>
+    <Link
+      component={"a"}
+      className="bordered-link-block bordered-link-block__cta"
+      target="_blank"
+      aria-label="open trailhead"
+      href="https://trailblazer.me/id/ikojielo"
+    >
+      <img src={trailheadLogo} alt="TrailheadLogo" />
+    </Link>
   );
 };
 

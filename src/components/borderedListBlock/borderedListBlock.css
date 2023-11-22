@@ -1,9 +1,37 @@
 .bordered-list-block {
-  background-color: #fff;
-  border: 1px solid #f6f0f0;
-  border-radius: 10px;
+  align-items: center;
+  display: grid;
+  gap: 50px;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  width: 100%;
+}
+
+.bordered-list-block .list-image-wrapper {
+  background-color: rgb(134, 157, 138);
+  border: 0.1rem solid #ffffff0c;
+  border-radius: 2.5rem;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 30px 40px;
+  justify-content: center;
+  max-height: 400px;
+  overflow: hidden;
+  padding: 30px 0px 0px 30px;
+  position: relative;
+
+  img {
+    border-radius: 1rem 0rem 0rem 0rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
+}
+
+.bordered-list-block .list-image-wrapper::after {
+  background: linear-gradient(transparent, rgba(134, 157, 138, 0.5));
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
