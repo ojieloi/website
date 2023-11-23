@@ -7,7 +7,7 @@ import trailheadLogo from "../../images/TrailheadLogo.svg";
 // comps
 import { Link } from "@mui/material";
 
-const BorderedLinkBlock = () => {
+const BorderedLinkBlock = ({ data }) => {
   return (
     <Link
       component={"a"}
@@ -15,6 +15,9 @@ const BorderedLinkBlock = () => {
       target="_blank"
       aria-label="open trailhead"
       href="https://trailblazer.me/id/ikojielo"
+      style={{
+        border: `0.25rem solid ${data.bdColor}`,
+      }}
     >
       <img src={trailheadLogo} alt="TrailheadLogo" />
     </Link>

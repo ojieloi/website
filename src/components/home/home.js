@@ -12,6 +12,11 @@ import BorderedListBlock from "../borderedListBlock/borderedListBlock";
 // styled components
 import { HeaderText } from "../../styledComponents";
 import { Colors } from "../../colors/colors";
+import ResumeBlock from "../resumeBlock/resumeBlock";
+
+// json data
+const resumeData = require("../../assets/json/workExperience.json");
+const projectsData = require("../../assets/json/projects.json");
 
 const HomePage = () => {
   return (
@@ -23,14 +28,14 @@ const HomePage = () => {
       <TextBlock />
 
       <Box sx={{ py: 20 }}>
-        <Container maxWidth="md">
+        <Container maxWidth="lg">
           {/* education */}
           <BorderedTextBlock
             data={{
               color: Colors.brownHeaderText,
               alignItems: "center",
               header: "New York Institute of Technology",
-              subheader: ["2016 - 2020", "Bachelors, Computer Science"],
+              subheader: ["2016 - 2020", "Bachelors | Cum Laude, Computer Science"],
               content: `Graduated in the Spring of 2021 after spending the last year and a
                   half learning remotely due to COVID. Most of learning experiences
                   that have carried over, came from this last stretch where I took
@@ -113,6 +118,14 @@ const HomePage = () => {
         </Container>
       </Box>
 
+      {/* resume */}
+      <ResumeBlock
+        data={{
+          header: "Resumé",
+          content: resumeData,
+        }}
+      />
+
       <Box sx={{ py: 10, backgroundColor: Colors.bluePageBackground }}>
         <Container>
           <div className="two-column-grid">
@@ -128,17 +141,26 @@ const HomePage = () => {
             />
 
             {/* link to trailhead */}
-            <BorderedLinkBlock />
+            <BorderedLinkBlock
+              data={{
+                bdColor: Colors.blueBorder,
+                color: Colors.blueHeaderText,
+                header: "Salesforce Certified",
+                subheader: ["Javascript Developer I"],
+                content: `Completed the LWC Specialist super badge and passed the Javascript Developer I multiple choice proctored exam.`,
+              }}
+            />
           </div>
         </Container>
       </Box>
 
-      {/* transition text */}
-      {/* <Box py={"100px"} textAlign={"center"}>
-        <HeaderText>wait.. there’s more 👇🏾</HeaderText>
-      </Box> */}
-
-      {/* <div className="two-column-grid"></div> */}
+      {/* projects */}
+      <ResumeBlock
+        data={{
+          header: "Projects",
+          content: projectsData,
+        }}
+      />
 
       {/* transition text */}
       <Box py={"100px"} textAlign={"center"}>

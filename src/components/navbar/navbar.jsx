@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // components
-import { Stack, Link, Typography, Box, Container } from "@mui/material";
+import { Stack, Link, Typography, Container } from "@mui/material";
 import { Colors } from "../../colors/colors";
 
 const Navbar = () => {

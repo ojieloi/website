@@ -34,20 +34,16 @@ const BorderedListBlock: React.FC<ListItem> = ({
     switch (id) {
       case "dev":
         return (
-          <Box>
-            <div className="list-image-wrapper">
-              <img src={devSkill} />
-            </div>
-          </Box>
+          <div className="list-image-wrapper">
+            <img src={devSkill} alt="vs_code" />
+          </div>
         );
 
       case "des":
         return (
-          <Box>
-            <div className="list-image-wrapper">
-              <img src={desSkill} />
-            </div>
-          </Box>
+          <div className="list-image-wrapper">
+            <img src={desSkill} alt="figma" />
+          </div>
         );
 
       case "softSkills":
@@ -108,11 +104,9 @@ const BorderedListBlock: React.FC<ListItem> = ({
         {/* list content */}
         <Stack direction={"row"} gap={2} flexWrap={"wrap"}>
           {items?.map((item, index) => (
-            <Stack direction={"row"} gap={1} alignItems={"center"}>
+            <Stack direction={"row"} gap={1} alignItems={"center"} key={index}>
               <CheckCircle htmlColor={Colors.greenBodyText} />
-              <BodyText key={index} color={Colors.greenBodyText}>
-                {item}
-              </BodyText>
+              <BodyText color={Colors.greenBodyText}>{item}</BodyText>
             </Stack>
           ))}
         </Stack>

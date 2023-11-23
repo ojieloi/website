@@ -25,7 +25,14 @@
 .two-column-grid {
   align-items: center;
   display: grid;
-  gap: 10px;
-  justify-content: center;
+  gap: 50px;
   grid-template-columns: minmax(500px, 1fr) minmax(100px, 200px);
+}
+
+@media only screen and (max-width: 800px) {
+  .two-column-grid {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
 }

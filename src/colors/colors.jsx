@@ -21,12 +21,13 @@ export const Colors = {
 
   blueHeaderText: "#40464e",
   blueBodyText: "#6b727a",
+  blueBorder: "#93a0a714",
 
   greenHeaderText: "#d8e8db",
   greenBodyText: "#869d8a",
 
   // borders
-  blueBorder: "#ECF2FA",
+  // blueBorder: "#ECF2FA",
   neutralBorder: "#FCECD4",
   grayBorder: "#F6F0F0",
 

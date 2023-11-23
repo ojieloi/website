@@ -1,7 +1,15 @@
 .bordered-text-block {
   border-radius: 10px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 10px;
   /* padding: 30px 40px; */
+}
+
+@media only screen and (max-width: 800px) {
+  .bordered-text-block {
+    align-items: center !important;
+    text-align: center !important;
+  }
 }
