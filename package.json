@@ -21,6 +21,10 @@
     "@mdx-js/react": "^1.6.22",
     "@mui/icons-material": "^5.14.13",
     "@mui/material": "^5.14.13",
+    "@types/jest": "^29.5.8",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.4.0",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
@@ -37,6 +41,10 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
     "react-rotating-text": "^1.4.1",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0"
   }
 }
