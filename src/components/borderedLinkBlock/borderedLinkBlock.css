@@ -12,24 +12,6 @@
   backface-visibility: hidden;
 }
 
-.bordered-link-block::before {
-  background-color: #93a0a763;
-  border-radius: 5px;
-  content: "";
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  transform: scaleX(0) scaleY(0);
-  transform-origin: center;
-  transition: transform 0.3s 0.1s;
-  width: 100%;
-}
-
-.bordered-link-block:hover::before {
-  transform: scaleX(1) scaleY(1);
-}
-
 .bordered-link-block:hover img {
   transform: scale(0.9);
 }
