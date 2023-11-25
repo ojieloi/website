@@ -1,42 +1,68 @@
 [
-  {
-    "company": "Stock Prediction App",
-    "period": {
-      "startDate": "Oct 2019",
-      "endDate": "Dec 2019"
-    },
-    "position": "iOS, Swift & Swift UI",
-    "content": [
-      "Designed UI mockups that focused on simplicity and usability.",
-      "Worked with APIs to create a currency converter, retrieve relevant news articles, and any stock related information (open and close prices, highs and lows, and others).",
-      "Integrated a Python script that took into account, a stock history ranging 4 years, and produced a predicted opening price.",
-      "Developed using Swift."
-    ]
-  },
-  {
-    "company": "Fitness App",
-    "period": {
-      "startDate": "Feb 2020",
-      "endDate": "May 2020"
-    },
-    "position": "iOS",
-    "content": [
-      "Implemented Google Firebase as cloud storage (meal / calorie tracker, user health data, fitness goals, etc) and user-authentication purposes.",
-      "Calculated user’s BMI using data users filled in during the onboarding process.",
-      "Integrated Apple HealthKit to retrieve calories user had burned, steps and distances user had travelled, as well as daily, weekly, monthly, and yearly averages.",
-      "Developed using Ionic and Angular JS."
-    ]
-  },
-  {
-    "company": "Personal Website",
-    "period": {
-      "startDate": "May 2021",
-      "endDate": "Present"
-    },
-    "position": "Web",
-    "content": [
-      "An all-in-one location to store, track and view my experiences as I navigate the tech landscape.",
-      "Developed using React and Material UI."
-    ]
-  }
+	{
+		"company": "Stock Prediction App",
+		"externalLink": "https://github.com/ojieloi/StockR",
+		"period": {
+			"startDate": "Oct 2019",
+			"endDate": "Dec 2019"
+		},
+		"position": "iOS",
+		"content": [
+			"Designed UI mockups that focused on simplicity and usability.",
+			"Worked with APIs to create a currency converter, retrieve relevant news articles, and any stock related information (open and close prices, highs and lows, and others).",
+			"Integrated a Python script that took into account, a stock history ranging 4 years, and produced a predicted opening price.",
+			"Developed using Swift."
+		]
+	},
+	{
+		"company": "Fitness App",
+		"externalLink": "https://github.com/ojieloi/XO_Fitness",
+		"period": {
+			"startDate": "Feb 2020",
+			"endDate": "May 2020"
+		},
+		"position": "iOS",
+		"content": [
+			"Implemented Google Firebase as cloud storage (meal / calorie tracker, user health data, fitness goals, etc) and user-authentication purposes.",
+			"Calculated user’s BMI using data users filled in during the onboarding process.",
+			"Integrated Apple HealthKit to retrieve calories user had burned, steps and distances user had travelled, as well as daily, weekly, monthly, and yearly averages.",
+			"Developed using Ionic and Angular JS."
+		]
+	},
+	{
+		"company": "Premier League Footy",
+		"externalLink": "https://github.com/ojieloi/PL-Footy",
+		"period": {
+			"startDate": "Oct 2020",
+			"endDate": "Nov 2020"
+		},
+		"position": "Web",
+		"content": [
+			"A way to see current Premier League matches and track scores for all teams, as well as view the Premier League tale to get an idea of the front-runners and those facing possible relegation.",
+			"Developed using Ionic and Angular JS."
+		]
+	},
+	{
+		"company": "Responsive Header",
+		"externalLink": "https://github.com/ojieloi/responsive-header",
+		"period": {
+			"startDate": "May 2021",
+			"endDate": "May 2021"
+		},
+		"position": "Web",
+		"content": ["Developed using React."]
+	},
+	{
+		"company": "Personal Website",
+		"externalLink": "https://github.com/ojieloi/website",
+		"period": {
+			"startDate": "May 2021",
+			"endDate": "Present"
+		},
+		"position": "Web",
+		"content": [
+			"An all-in-one location to store, track and view my experiences as I navigate the tech landscape.",
+			"Developed using React, Gatsby and Material UI."
+		]
+	}
 ]

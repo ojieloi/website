@@ -1,61 +1,65 @@
 [
-  {
-    "company": "Zensoft IO",
-    "period": {
-      "startDate": "Jun 2019",
-      "endDate": "Jul 2019"
-    },
-    "position": "Intern, Backend Developer",
-    "content": [
-      "Built APIs for content management workflow.",
-      "Collaborated with frontend engineers to develop server-side solutions.",
-      "Developed services to retrieve and send user data to PostgreSQL databases."
-    ]
-  },
-  {
-    "company": "Planet Classroom",
-    "period": {
-      "startDate": "Sep 2020",
-      "endDate": "Nov 2020"
-    },
-    "position": "Intern, Web Developer & Management",
-    "content": [
-      "Built web pages using Wordpress.",
-      "Wrote new, and modified existing code using HTML and CSS.",
-      "Designed new features and interfaces using Figma.",
-      "Customized themes to meet stakeholder requirements.",
-      "Introduced new plugins and extensions to make website more usable and interactive."
-    ]
-  },
-  {
-    "company": "Heali AI",
-    "period": {
-      "startDate": "Nov 2020",
-      "endDate": "Jun 2021"
-    },
-    "position": "Intern, UI / UX Designer",
-    "content": [
-      "Gathered and evaluated user requirements in collaboration with product managers and UX researchers.",
-      "Optimized existing UI designs.",
-      "Developed UI mockups and prototypes for new ideas that clearly illustrated how app will look and function.",
-      "Conducted design / layout adjustments based on user interviews and feedback.",
-      "Delivered UI specifications, wireframes, and prototypes across product design and engineering teams."
-    ]
-  },
-  {
-    "company": "Shift7, a Merkle Company",
-    "period": {
-      "startDate": "Jun 2021",
-      "endDate": "Present"
-    },
-    "position": "Frontend Developer",
-    "content": [
-      "Translated complex designs and wireframes into flexible and usable code.",
-      "Delivered resuable components that allowed clients to build on future products more efficiently.",
-      "Refactored and optimized older internal code to better optimized and beautiful code.",
-      "Delivered multiple email templates that were tested and used across various email clients, campaigns, and projects.",
-      "Delivered UI specifications, wireframes, and prototypes across product design and engineering teams.",
-      "Collaborated with client managerial and development teams to develop and ship tools for their internal users and customers."
-    ]
-  }
+	{
+		"company": "Zensoft IO",
+		"externalLink": "https://www.zensoft.io/",
+		"period": {
+			"startDate": "Jun 2019",
+			"endDate": "Jul 2019"
+		},
+		"position": "Intern, Backend Developer",
+		"content": [
+			"Built APIs for content management workflow.",
+			"Collaborated with frontend engineers to develop server-side solutions.",
+			"Developed services to retrieve and send user data to PostgreSQL databases."
+		]
+	},
+	{
+		"company": "Planet Classroom",
+		"externalLink": "https://www.planetclassroom.world/browse-planet-classroom/",
+		"period": {
+			"startDate": "Sep 2020",
+			"endDate": "Nov 2020"
+		},
+		"position": "Intern, Web Developer & Management",
+		"content": [
+			"Built web pages using Wordpress.",
+			"Wrote new, and modified existing code using HTML and CSS.",
+			"Designed new features and interfaces using Figma.",
+			"Customized themes to meet stakeholder requirements.",
+			"Introduced new plugins and extensions to make website more usable and interactive."
+		]
+	},
+	{
+		"company": "Heali AI",
+		"externalLink": "https://www.heali.com/",
+		"period": {
+			"startDate": "Nov 2020",
+			"endDate": "Jun 2021"
+		},
+		"position": "Intern, UI / UX Designer",
+		"content": [
+			"Gathered and evaluated user requirements in collaboration with product managers and UX researchers.",
+			"Optimized existing UI designs.",
+			"Developed UI mockups and prototypes for new ideas that clearly illustrated how app will look and function.",
+			"Conducted design / layout adjustments based on user interviews and feedback.",
+			"Delivered UI specifications, wireframes, and prototypes across product design and engineering teams."
+		]
+	},
+	{
+		"company": "Shift7, a Merkle Company",
+		"externalLink": "https://www.shift7digital.com/",
+		"period": {
+			"startDate": "Jun 2021",
+			"endDate": "Present"
+		},
+		"position": "Frontend Developer",
+		"content": [
+			"Translated complex designs and wireframes into flexible and usable code.",
+			"Delivered resuable components that allowed clients to build on future products more efficiently.",
+			"Refactored and optimized older internal code to better optimized and beautiful code.",
+			"Delivered multiple email templates that were tested and used across various email clients, campaigns, and projects.",
+			"Delivered UI specifications, wireframes, and prototypes across product design and engineering teams.",
+			"Collaborated with client managerial and development teams to develop and ship tools for their internal users and customers."
+		]
+	}
 ]

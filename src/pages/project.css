@@ -1,0 +1,23 @@
+/* Inter & Libre Baskerville Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lato:wght@400;700;900&family=Libre+Baskerville:wght@400;700&display=swap");
+
+/* *::selection {
+  background: #e7e7e7;
+} */
+
+* {
+	/* font-family: "Inter", sans-serif !important; */
+	margin: 0;
+	padding: 0;
+	/* transition: all 0.2s; */
+}
+
+html {
+	background-color: #fbfbfb;
+}
+
+/* @media (prefers-reduced-motion) {
+  * {
+    transition: none;
+  }
+} */
