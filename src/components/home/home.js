@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./home.css";
+import { motion } from "framer-motion";
 
 // comps
 import { Box, Container, Stack } from "@mui/material";
@@ -21,100 +22,111 @@ const HomePage = () => {
 	return (
 		<Stack direction={"column"} gap={2}>
 			{/* page nav */}
-			<Navbar />
+			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
+				<Navbar />
+			</motion.div>
 
 			{/* home intro text */}
-			<TextBlock />
+			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
+				<TextBlock />
+			</motion.div>
 
-			<Box sx={{ py: 20 }}>
-				<Container maxWidth="lg">
-					{/* education */}
-					<BorderedTextBlock
-						data={{
-							color: Colors.brownHeaderText,
-							alignItems: "center",
-							header: "New York Institute of Technology",
-							subheader: [
-								"2016 - 2020",
-								"Bachelors | Cum Laude, Computer Science",
-							],
-							content: `Graduated in the Spring of 2021 after spending the last year and a
+			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
+				<Box sx={{ py: 20 }}>
+					<Container maxWidth="lg">
+						{/* education */}
+						<BorderedTextBlock
+							data={{
+								color: Colors.brownHeaderText,
+								alignItems: "center",
+								header: "New York Institute of Technology",
+								subheader: [
+									"2016 - 2020",
+									"Bachelors | Cum Laude, Computer Science",
+								],
+								content: `Graduated in the Spring of 2021 after spending the last year and a
                   half learning remotely due to COVID. Most of learning experiences
                   that have carried over, came from this last stretch where I took
                   upon multiple developement projects that honed my skills in this
                   industry I find myself working in currently.`,
-						}}
-					/>
-				</Container>
-			</Box>
-
-			<Box py={20} sx={{ backgroundColor: Colors.greenPageBackground }}>
-				<Container>
-					<Stack direction={"column"} gap={15} alignItems={"center"}>
-						<Container maxWidth="sm" sx={{ textAlign: "center" }}>
-							<HeaderText color={Colors.greenHeaderText}>
-								Some things I've learned along the way
-							</HeaderText>
-						</Container>
-
-						<BorderedListBlock
-							color={Colors.black}
-							header={["Development"]}
-							id="dev"
-							items={[
-								"Angular",
-								"React",
-								"Bloomreach",
-								"Salesforce",
-								"Firebase",
-								"Git",
-								"Testing & Debugging",
-								"APIs",
-								"Feature Developement & Improvement",
-								"Application Developement",
-							]}
+							}}
 						/>
+					</Container>
+				</Box>
+			</motion.div>
 
-						<BorderedListBlock
-							color={Colors.black}
-							header={["Design"]}
-							id="des"
-							items={[
-								"Adobe XD",
-								"Figma",
-								"Invision Studio",
-								"Visual & Responsive Design",
-								"Wireframing",
-								"Prototyping",
-								"UI & UX Design",
-							]}
-						/>
+			<motion.div
+				initial={{ opacity: 0, y: 200 }}
+				whileInView={{ opacity: 1, y: 0 }}
+			>
+				<Box py={20} sx={{ backgroundColor: Colors.greenPageBackground }}>
+					<Container>
+						<Stack direction={"column"} gap={15} alignItems={"center"}>
+							<Container maxWidth="sm" sx={{ textAlign: "center" }}>
+								<HeaderText color={Colors.greenHeaderText}>
+									Some things I've learned along the way
+								</HeaderText>
+							</Container>
 
-						<BorderedListBlock
-							color={Colors.black}
-							header={["Soft Skills"]}
-							id="softSkills"
-							items={[
-								"Communication",
-								"Problem Solving",
-								"Adaptability",
-								"Visual Thinking",
-								"Collaboration",
-								"Leadership",
-								"Patience",
-								"Time Management",
-							]}
-						/>
+							<BorderedListBlock
+								color={Colors.black}
+								header={["Development"]}
+								id="dev"
+								items={[
+									"Angular",
+									"React",
+									"Bloomreach",
+									"Salesforce",
+									"Firebase",
+									"Git",
+									"Testing & Debugging",
+									"APIs",
+									"Feature Developement & Improvement",
+									"Application Developement",
+								]}
+							/>
 
-						<BorderedListBlock
-							color={Colors.black}
-							header={["Goals"]}
-							id="goals"
-							items={["Improve soft skills", "Freelancing", "Learn Swift UI"]}
-						/>
-					</Stack>
-				</Container>
-			</Box>
+							<BorderedListBlock
+								color={Colors.black}
+								header={["Design"]}
+								id="des"
+								items={[
+									"Adobe XD",
+									"Figma",
+									"Invision Studio",
+									"Visual & Responsive Design",
+									"Wireframing",
+									"Prototyping",
+									"UI & UX Design",
+								]}
+							/>
+
+							<BorderedListBlock
+								color={Colors.black}
+								header={["Soft Skills"]}
+								id="softSkills"
+								items={[
+									"Communication",
+									"Problem Solving",
+									"Adaptability",
+									"Visual Thinking",
+									"Collaboration",
+									"Leadership",
+									"Patience",
+									"Time Management",
+								]}
+							/>
+
+							<BorderedListBlock
+								color={Colors.black}
+								header={["Goals"]}
+								id="goals"
+								items={["Improve soft skills", "Freelancing", "Learn Swift UI"]}
+							/>
+						</Stack>
+					</Container>
+				</Box>
+			</motion.div>
 
 			{/* resume */}
 			<ResumeBlock
