@@ -22,16 +22,22 @@ const HomePage = () => {
 	return (
 		<Stack direction={"column"} gap={2}>
 			{/* page nav */}
-			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
 				<Navbar />
-			</motion.div>
 
 			{/* home intro text */}
-			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
+			<motion.div
+				initial={{ y: 100, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.5 }}
+			>
 				<TextBlock />
 			</motion.div>
 
-			<motion.div initial={{ y: 100 }} whileInView={{ y: 0 }}>
+			<motion.div
+				initial={{ y: 100, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.5 }}
+			>
 				<Box sx={{ py: 20 }}>
 					<Container maxWidth="lg">
 						{/* education */}
@@ -58,6 +64,7 @@ const HomePage = () => {
 			<motion.div
 				initial={{ opacity: 0, y: 200 }}
 				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.5 }}
 			>
 				<Box py={20} sx={{ backgroundColor: Colors.greenPageBackground }}>
 					<Container>
