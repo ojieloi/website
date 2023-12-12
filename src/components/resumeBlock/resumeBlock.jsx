@@ -37,9 +37,10 @@ const LightTooltip = styled(({ className, ...props }) => (
 	},
 }));
 
-const ResumeBlock = ({ data }) => {
+const ResumeBlock = ({ openProject, data, setProject }) => {
 	const [activeStep, setActiveStep] = React.useState(0);
 
+	// go to next project
 	const handleNext = () => {
 		if (activeStep < data.content.length - 1) {
 			setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -48,12 +49,15 @@ const ResumeBlock = ({ data }) => {
 		}
 	};
 
+	// go to previous project
 	const handleBack = () => {
 		setActiveStep((prevActiveStep) => prevActiveStep - 1);
 	};
 
-	const handleExternalLink = (link) => {
-		window.open(link, "_blank");
+	// open project in detail
+	const handleExternalClick = (project) => {
+		openProject(true);
+		setProject(project);
 	};
 
 	return (
@@ -83,7 +87,7 @@ const ResumeBlock = ({ data }) => {
 															<IconButton
 																variant="filledTonal"
 																onClick={() => {
-																	handleExternalLink(item.externalLink);
+																	handleExternalClick(item);
 																}}
 															>
 																<ArrowOutwardRounded />
