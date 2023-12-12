@@ -37,7 +37,7 @@ const Navbar = () => {
 					<Link
 						component={"button"}
 						onClick={() => {
-							navigate("/project");
+							navigate("/projects");
 						}}
             sx={{ textDecoration: "none" }}
 					>

@@ -10,7 +10,7 @@ import ResumeBlock from "../components/resumeBlock/resumeBlock";
 const projectsData = require("../assets/json/projects.json");
 const designData = require("../assets/json/designs.json");
 
-const ProjectPage = () => (
+const ProjectsPage = () => (
 	<main>
 		<Stack direction={"column"} gap={2} pb={20}>
 			{/* navbar */}
@@ -74,4 +74,4 @@ const ProjectPage = () => (
 	</main>
 );
 
-export default ProjectPage;
+export default ProjectsPage;
