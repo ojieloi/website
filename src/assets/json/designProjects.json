@@ -1,0 +1,19 @@
+[
+  {
+    "company": "Béau",
+    "externalLink": "https://www.behance.net/gallery/99655695/bau-Cosmetic-web-design",
+    "period": {
+      "startDate": "Jun 2020"
+    },
+    "position": "Web",
+    "content": [
+      "Designed UI mockups that focused on simplicity and usability.",
+      "Worked with APIs to create a currency converter, retrieve relevant news articles, and any stock related information (open and close prices, highs and lows, and others).",
+      "Integrated a Python script that took into account, a stock history ranging 4 years, and produced a predicted opening price.",
+      "Developed using Swift."
+    ],
+    "images": [
+      "/images/portfolio-images/design/beau/intro.png"
+    ]
+  }
+]
