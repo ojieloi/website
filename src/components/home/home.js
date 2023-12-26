@@ -15,14 +15,52 @@ import { HeaderText } from "../../styledComponents";
 import { Colors } from "../../colors/colors";
 import ResumeBlock from "../resumeBlock/resumeBlock";
 
+import useSWR from "swr";
+import { client } from "../../../utils/contentful";
+
 // json data
-const resumeData = require("../../assets/json/workExperience.json");
+// const resumeData = require("../../assets/json/workExperience.json");
+
+// fetch resume data
+const fetcher = async () => {
+	const fetchData = await client.getEntries({ content_type: "resume" });
+
+	const resume = fetchData.items.map((data) => {
+		const { fields } = data;
+
+		return {
+			company: fields.company,
+			position: fields.position,
+			startDate: fields.startDate,
+			endDate: fields.endDate,
+			externalLink: fields.externalLink,
+			content: fields.content,
+		};
+	});
+
+	return resume;
+};
 
 const HomePage = () => {
+	// fetch resume data
+  let resumeData;
+	const { data, error } = useSWR("contentful", fetcher);
+
+	if (error) {
+		console.error(error);
+	}
+
+	if (!data) {
+		console.error("No data");
+	} else {
+    resumeData = data;
+    console.log("resume data", data);
+  }
+
 	return (
 		<Stack direction={"column"} gap={2}>
 			{/* page nav */}
-				<Navbar />
+			<Navbar />
 
 			{/* home intro text */}
 			<motion.div

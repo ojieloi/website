@@ -6,129 +6,165 @@ import { Colors } from "../colors/colors";
 // components
 import Navbar from "../components/navbar/navbar";
 import BorderedTextBlock from "../components/borderedTextBlock/borderedTextBlock";
-import ResumeBlock from "../components/resumeBlock/resumeBlock";
+// import ResumeBlock from "../components/resumeBlock/resumeBlock";
+import ProjectsBlock from "../components/projectsBlock/projectsBlock";
 import ProjectTemplate from "../components/project/project";
 
-// firebase
-// import { getResume } from "../../utils/resume";
+import useSWR from "swr";
+import { client } from "../../utils/contentful";
 
 // json data
-const projectsData = require("../assets/json/projects.json");
-const designData = require("../assets/json/designProjects.json");
+// const projectsData = require("../assets/json/projects.json");
+// const designData = require("../assets/json/designProjects.json");
 
 // set dialog transition
 const Transition = React.forwardRef(function Transition(
-  props: TransitionProps & {
-    children: React.ReactElement;
-  },
-  ref: React.Ref<unknown>
+	props: TransitionProps & {
+		children: React.ReactElement;
+	},
+	ref: React.Ref<unknown>
 ) {
-  return (
-    <Slide
-      direction="up"
-      ref={ref}
-      {...props}
-      easing={{
-        enter: "ease-in-out",
-        exit: "ease-in-out",
-      }}
-    />
-  );
+	return (
+		<Slide
+			direction="up"
+			ref={ref}
+			{...props}
+			easing={{
+				enter: "ease-in-out",
+				exit: "ease-in-out",
+			}}
+		/>
+	);
 });
 
+// fetch projects
+const fetcher = async () => {
+	const projectsData = await client.getEntries({ content_type: "project" });
+
+	const projects = projectsData.items.map((data) => {
+		const { fields } = data;
+
+		let imagesEntry = JSON.stringify(fields.images);
+		let imagesData = JSON.parse(imagesEntry);
+
+		return {
+			name: fields.name,
+			type: fields.type,
+			images: imagesData.map((image) => {
+				return {
+					title: image.fields.title,
+					url: image.fields.file.url,
+				};
+			}),
+		};
+	});
+
+	return projects;
+};
+
 const ProjectsPage = () => {
-  // drawer state
-  const [open, setOpen] = React.useState(false);
-  const [project, setProject] = React.useState({});
+	// fetch data
+	const { data, error } = useSWR("contentful", fetcher);
 
-  const toggleDialog = (isOpen: boolean) => {
-    setOpen(isOpen);
-  };
+	if (error) {
+		console.error(error);
+	}
 
-  const setActiveProject = (project) => {
-    setProject(project);
-  };
+	// console.log(data);
 
-  // get resume
-  // React.useEffect(() => {
-  //   getResume();
-  // }, []);
+	// console.log("All projects", projects);
 
-  return (
-    <main>
-      <Dialog open={open} fullScreen TransitionComponent={Transition}>
-        <ProjectTemplate project={project} closeProject={toggleDialog} />
-      </Dialog>
+	// drawer state
+	const [open, setOpen] = React.useState(false);
+	const [project, setProject] = React.useState({});
 
-      {/* <Drawer open={open} variant="persistent">
-				<ProjectTemplate />
-			</Drawer> */}
+	const toggleDialog = (isOpen: boolean) => {
+		setOpen(isOpen);
+	};
 
-      <Stack direction={"column"} gap={2} pb={20}>
-        {/* navbar */}
-        <Navbar />
+	const setActiveProject = (item) => {
+		setProject(item[0]);
+	};
 
-        {/* about project */}
-        <Box py={10}>
-          <Container maxWidth="lg">
-            <BorderedTextBlock
-              data={{
-                color: Colors.brownHeaderText,
-                alignItems: "center",
-                header: "All Projects",
-                subheader: ["2018 - Present"],
-                content: `A collection of some design and developement work throughout the years, take a peak below`,
-              }}
-            />
-          </Container>
-        </Box>
+	if (!data) {
+		console.error("No data");
+	} else {
+		return (
+			<main>
+				<Dialog open={open} fullScreen TransitionComponent={Transition}>
+					<ProjectTemplate project={data} closeProject={toggleDialog} />
+				</Dialog>
 
-        {/* projects */}
-        <Box>
-          <Container
-            sx={{
-              backgroundColor: Colors.redPageBackground,
-              borderRadius: "4rem",
-              padding: "0px !important",
-            }}
-          >
-            <Container maxWidth="md" sx={{ padding: "0px !important" }}>
-              <ResumeBlock
-                data={{
-                  header: "Developement",
-                  content: projectsData,
-                }}
-                openProject={toggleDialog}
-                setProject={setActiveProject}
-              />
-            </Container>
-          </Container>
-        </Box>
+				{/* <Drawer open={open} variant="persistent">
+          <ProjectTemplate />
+        </Drawer> */}
 
-        {/* designs */}
-        <Box>
-          <Container
-            sx={{
-              backgroundColor: Colors.neutralPageBackground,
-              borderRadius: "4rem",
-              padding: "0px !important",
-            }}
-          >
-            <Container maxWidth="md" sx={{ padding: "0px !important" }}>
-              <ResumeBlock
-                data={{
-                  header: "Designs",
-                  content: designData,
-                }}
-                openProject={toggleDialog}
-                setProject={setActiveProject}
-              />
-            </Container>
-          </Container>
-        </Box>
-      </Stack>
-    </main>
-  );
+				<Stack direction={"column"} gap={2} pb={20}>
+					{/* navbar */}
+					<Navbar />
+
+					{/* about project */}
+					<Box py={10}>
+						<Container maxWidth="lg">
+							<BorderedTextBlock
+								data={{
+									color: Colors.brownHeaderText,
+									alignItems: "center",
+									header: "All Projects",
+									subheader: ["2018 - Present"],
+									content: `A collection of some design and developement work throughout the years, take a peak below`,
+								}}
+							/>
+						</Container>
+					</Box>
+
+					{/* projects */}
+					<Box>
+						<Container
+							sx={{
+								backgroundColor: Colors.redPageBackground,
+								borderRadius: "4rem",
+								padding: "0px !important",
+							}}
+						>
+							<Container maxWidth="md" sx={{ padding: "0px !important" }}>
+								<ProjectsBlock
+									data={{
+										header: "Developement",
+										content: data,
+									}}
+									openProject={toggleDialog}
+									setProject={setActiveProject}
+								/>
+							</Container>
+						</Container>
+					</Box>
+
+					{/* designs */}
+					<Box>
+						<Container
+							sx={{
+								backgroundColor: Colors.neutralPageBackground,
+								borderRadius: "4rem",
+								padding: "0px !important",
+							}}
+						>
+							<Container maxWidth="md" sx={{ padding: "0px !important" }}>
+								{/* <ResumeBlock
+                  data={{
+                    header: "Designs",
+                    content: designData,
+                  }}
+                  openProject={toggleDialog}
+                  setProject={setActiveProject}
+                /> */}
+							</Container>
+						</Container>
+					</Box>
+				</Stack>
+			</main>
+		);
+	}
 };
 
 export default ProjectsPage;

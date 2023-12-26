@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./resumeBlock.css";
+import "./projectsBlock.css";
 
 import { Colors } from "../../colors/colors";
 import { Box, Container, Stack, IconButton } from "@mui/material";
@@ -37,7 +37,7 @@ const LightTooltip = styled(({ className, ...props }) => (
 	},
 }));
 
-const ResumeBlock = ({ data }) => {
+const ProjectsBlock = ({ openProject, data, setProject }) => {
 	const [activeStep, setActiveStep] = React.useState(0);
 
 	// go to next project
@@ -55,8 +55,9 @@ const ResumeBlock = ({ data }) => {
 	};
 
 	// open project in detail
-	const handleExternalClick = (url) => {
-		window.open(url, "_blank");
+	const handleExternalClick = (item) => {
+		openProject(true);
+		setProject(item);
 	};
 
 	return (
@@ -74,10 +75,10 @@ const ResumeBlock = ({ data }) => {
 									<Step key={index}>
 										<StepLabel>
 											<div className="resume-header">
-												{/* company */}
+												{/* name */}
 												<Stack direction={"row"} gap={2} alignItems={"center"}>
 													<SubBodyHeaderText color={Colors.blackText}>
-														{item.company}
+														{item.name}
 													</SubBodyHeaderText>
 
 													{/* open external link */}
@@ -96,24 +97,24 @@ const ResumeBlock = ({ data }) => {
 												</Stack>
 
 												<div>
-													{/* position */}
+													{/* type */}
 													<SubBodyHeaderText
 														color={Colors.blueBodyText}
 														id="position"
 													>
-														{item.position}
+														{item.type}
 													</SubBodyHeaderText>
 
 													{/* start - end dates */}
-													<SubBodyText color={Colors.brownBodyText} id="period">
-														{item.startDate
-															? item.startDate
+													{/* <SubBodyText color={Colors.brownBodyText} id="period">
+														{item.period.startDate
+															? item.period.startDate
 															: null}
 
-														{item.endDate
-															? ` - ${item.endDate}`
+														{item.period.endDate
+															? ` - ${item.period.endDate}`
 															: null}
-													</SubBodyText>
+													</SubBodyText> */}
 												</div>
 											</div>
 										</StepLabel>
@@ -122,7 +123,7 @@ const ResumeBlock = ({ data }) => {
 											{item.content ? (
 												<div className="resume-content">
 													{/* content */}
-													<Stack direction={"column"} gap={4}>
+													{/* <Stack direction={"column"} gap={4}>
 														{item.content.map((content, contentIndex) => {
 															return (
 																<BodyText
@@ -134,7 +135,7 @@ const ResumeBlock = ({ data }) => {
 																</BodyText>
 															);
 														})}
-													</Stack>
+													</Stack> */}
 												</div>
 											) : null}
 
@@ -186,4 +187,4 @@ const ResumeBlock = ({ data }) => {
 	);
 };
 
-export default ResumeBlock;
+export default ProjectsBlock;
