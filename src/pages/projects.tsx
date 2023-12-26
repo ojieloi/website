@@ -10,7 +10,7 @@ import ResumeBlock from "../components/resumeBlock/resumeBlock";
 import ProjectTemplate from "../components/project/project";
 
 // firebase
-import { getResume } from "../../utils/resume";
+// import { getResume } from "../../utils/resume";
 
 // json data
 const projectsData = require("../assets/json/projects.json");
@@ -50,9 +50,9 @@ const ProjectsPage = () => {
   };
 
   // get resume
-  React.useEffect(() => {
-    getResume();
-  }, []);
+  // React.useEffect(() => {
+  //   getResume();
+  // }, []);
 
   return (
     <main>

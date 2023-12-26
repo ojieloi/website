@@ -2,6 +2,12 @@ import * as React from "react";
 import { Stack, Box, Container, IconButton, Typography } from "@mui/material";
 import { ChevronLeftRounded } from "@mui/icons-material";
 
+// Texts
+import { BodyText, HeaderText } from "../../styledComponents";
+
+// Colors
+import { Colors } from "../../colors/colors";
+
 const ProjectTemplate = ({ closeProject, project }) => {
   console.log(project);
 
@@ -11,7 +17,7 @@ const ProjectTemplate = ({ closeProject, project }) => {
         <Container maxWidth="lg">
           <Stack direction={"column"} gap={2}>
             {/* header */}
-            <Box>
+            <Box pt={2}>
               <Container>
                 <IconButton
                   variant="contained"
@@ -25,13 +31,25 @@ const ProjectTemplate = ({ closeProject, project }) => {
             </Box>
 
             {/* project desc */}
-            <Stack direction={"column"} gap={1}>
-              <Typography variant={"h1"}>{project.company}</Typography>
-              <Typography variant={"p"}>{project.content}</Typography>
-            </Stack>
+            <Box py={10}>
+              <Container maxWidth="md">
+                <Stack direction={"column"} gap={4} textAlign={"center"}>
+                  <HeaderText color={Colors.black}>
+                    {project.company}
+                  </HeaderText>
+
+                  <BodyText color={Colors.brownBodyText}>
+                    {project.content}
+                  </BodyText>
+
+                  {/* <Typography variant={"h1"}>{project.company}</Typography> */}
+                  {/* <Typography variant={"p"}>{project.content}</Typography> */}
+                </Stack>
+              </Container>
+            </Box>
 
             {/* project images, etc */}
-						<Stack direction={"column"} gap={1}>
+            <Stack direction={"column"} gap={1}>
               <img src={project.images[0]} />
             </Stack>
           </Stack>
