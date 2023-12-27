@@ -1,18 +1,26 @@
 import * as React from "react";
+import "./project.css";
+
 import { Stack, Box, Container, IconButton, Typography } from "@mui/material";
 import { ChevronLeftRounded } from "@mui/icons-material";
 
+// framer
+import { ListItemVariants } from "../../framer-motion";
+import { motion } from "framer-motion";
+
 // Texts
-import { BodyText, HeaderText } from "../../styledComponents";
+import { BodyText, HeaderText, SubBodyText } from "../../styledComponents";
 
 // Colors
 import { Colors } from "../../colors/colors";
 
+const transition = {
+	type: "spring",
+	damping: 25,
+	stiffness: 120,
+};
+
 const ProjectTemplate = ({ closeProject, project }) => {
-	console.log("Project dialog data", project[0]);
-
-	const data = project[0];
-
 	return (
 		<main>
 			<Box sx={{ minHeight: "100vh", backgroundColor: "#fbfbfb" }} py={2}>
@@ -32,24 +40,52 @@ const ProjectTemplate = ({ closeProject, project }) => {
 							</Container>
 						</Box>
 
-						{/* project desc */}
+						{/* project... */}
 						<Box py={10}>
 							<Container maxWidth="md">
 								<Stack direction={"column"} gap={4} textAlign={"center"}>
-									<HeaderText color={Colors.black}>{data.name}</HeaderText>
+									{/* name */}
+									<HeaderText color={Colors.blackText}>
+										{project.name}
+									</HeaderText>
 
-									<BodyText color={Colors.brownBodyText}>{data.type}</BodyText>
+									{/* type */}
+									<SubBodyText color={Colors.brownBodyText}>
+										{project.type}
+									</SubBodyText>
 
-									{/* <Typography variant={"h1"}>{data.company}</Typography> */}
-									{/* <Typography variant={"p"}>{data.content}</Typography> */}
+									{/* description */}
+									<BodyText color={Colors.brownBodyText}>
+										{project.description}
+									</BodyText>
 								</Stack>
 							</Container>
 						</Box>
 
 						{/* project images, etc */}
-						<Stack direction={"column"} gap={2}>
-							{data.images.map((image, index) => (
-								<img key={index} src={image.url} />
+						<Stack direction={"column"} gap={4}>
+							{project.images.map((image, index) => (
+								<motion.div
+									variants={ListItemVariants}
+									initial="initial"
+									whileInView="animate"
+									key={index}
+									custom={index}
+									viewport={{
+										once: true,
+									}}
+								>
+									<img
+										key={index}
+										src={image.url}
+										style={{
+											border: "1px solid",
+											borderColor: Colors.grayBorder,
+											borderRadius: "10px",
+											width: "100%",
+										}}
+									/>
+								</motion.div>
 							))}
 						</Stack>
 					</Stack>

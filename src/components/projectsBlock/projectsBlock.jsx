@@ -120,9 +120,13 @@ const ProjectsBlock = ({ openProject, data, setProject }) => {
 										</StepLabel>
 
 										<StepContent>
-											{item.content ? (
+											{item.description ? (
 												<div className="resume-content">
 													{/* content */}
+													<BodyText id="content" color={Colors.blueBodyText}>
+														{item.description}
+													</BodyText>
+
 													{/* <Stack direction={"column"} gap={4}>
 														{item.content.map((content, contentIndex) => {
 															return (

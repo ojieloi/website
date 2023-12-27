@@ -38,11 +38,12 @@ const LightTooltip = styled(({ className, ...props }) => (
 }));
 
 const ResumeBlock = ({ data }) => {
+	const resumeData = data.content;
 	const [activeStep, setActiveStep] = React.useState(0);
 
 	// go to next project
 	const handleNext = () => {
-		if (activeStep < data.content.length - 1) {
+		if (activeStep < resumeData.length - 1) {
 			setActiveStep((prevActiveStep) => prevActiveStep + 1);
 		} else {
 			setActiveStep(0);
@@ -59,6 +60,8 @@ const ResumeBlock = ({ data }) => {
 		window.open(url, "_blank");
 	};
 
+	console.log(data);
+
 	return (
 		<Box py={20}>
 			<Container maxWidth="lg">
@@ -69,7 +72,7 @@ const ResumeBlock = ({ data }) => {
 						</SubheaderText>
 
 						<Stepper orientation="vertical" activeStep={activeStep}>
-							{data.content.map((item, index) => {
+							{resumeData.map((item, index) => {
 								return (
 									<Step key={index}>
 										<StepLabel>
@@ -106,13 +109,9 @@ const ResumeBlock = ({ data }) => {
 
 													{/* start - end dates */}
 													<SubBodyText color={Colors.brownBodyText} id="period">
-														{item.startDate
-															? item.startDate
-															: null}
+														{item.startDate ? item.startDate : null}
 
-														{item.endDate
-															? ` - ${item.endDate}`
-															: null}
+														{item.endDate ? ` - ${item.endDate}` : null}
 													</SubBodyText>
 												</div>
 											</div>
@@ -143,7 +142,7 @@ const ResumeBlock = ({ data }) => {
 													{/* go down */}
 													<LightTooltip
 														title={
-															index === data.content.length - 1
+															index === resumeData.length - 1
 																? "Restart"
 																: "Next"
 														}
@@ -152,7 +151,7 @@ const ResumeBlock = ({ data }) => {
 															variant="filledTonal"
 															onClick={handleNext}
 														>
-															{index === data.content.length - 1 ? (
+															{index === resumeData.length - 1 ? (
 																<RefreshRounded />
 															) : (
 																<ArrowDownwardRounded />

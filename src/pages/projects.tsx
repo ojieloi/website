@@ -6,16 +6,11 @@ import { Colors } from "../colors/colors";
 // components
 import Navbar from "../components/navbar/navbar";
 import BorderedTextBlock from "../components/borderedTextBlock/borderedTextBlock";
-// import ResumeBlock from "../components/resumeBlock/resumeBlock";
 import ProjectsBlock from "../components/projectsBlock/projectsBlock";
 import ProjectTemplate from "../components/project/project";
 
 import useSWR from "swr";
 import { client } from "../../utils/contentful";
-
-// json data
-// const projectsData = require("../assets/json/projects.json");
-// const designData = require("../assets/json/designProjects.json");
 
 // set dialog transition
 const Transition = React.forwardRef(function Transition(
@@ -39,9 +34,11 @@ const Transition = React.forwardRef(function Transition(
 
 // fetch projects
 const fetcher = async () => {
-	const projectsData = await client.getEntries({ content_type: "project" });
+	const designsData = await client.getEntries({ content_type: "design" });
+	const developmentData = await client.getEntries({ content_type: "project" });
 
-	const projects = projectsData.items.map((data) => {
+	// design projects
+	const designs = designsData.items.map((data) => {
 		const { fields } = data;
 
 		let imagesEntry = JSON.stringify(fields.images);
@@ -50,6 +47,7 @@ const fetcher = async () => {
 		return {
 			name: fields.name,
 			type: fields.type,
+			description: fields.description,
 			images: imagesData.map((image) => {
 				return {
 					title: image.fields.title,
@@ -59,20 +57,40 @@ const fetcher = async () => {
 		};
 	});
 
-	return projects;
+	// dev projects
+	const developments = developmentData.items.map((data) => {
+		const { fields } = data;
+
+		let imagesEntry = JSON.stringify(fields.images);
+		let imagesData = JSON.parse(imagesEntry);
+
+		return {
+			name: fields.name,
+			type: fields.type,
+			description: fields.description,
+			images: imagesData.map((image) => {
+				return {
+					title: image.fields.title,
+					url: image.fields.file.url,
+				};
+			}),
+		};
+	});
+
+	return { designs, developments };
 };
 
 const ProjectsPage = () => {
 	// fetch data
 	const { data, error } = useSWR("contentful", fetcher);
+	const designProjects = data?.designs;
+	const devProjects = data?.developments;
 
 	if (error) {
 		console.error(error);
 	}
 
-	// console.log(data);
-
-	// console.log("All projects", projects);
+	// console.log(designProjects, devProjects);
 
 	// drawer state
 	const [open, setOpen] = React.useState(false);
@@ -83,26 +101,24 @@ const ProjectsPage = () => {
 	};
 
 	const setActiveProject = (item) => {
-		setProject(item[0]);
+		setProject({});
+		setProject(item);
 	};
 
-	if (!data) {
+	if (!(designProjects && devProjects)) {
 		console.error("No data");
 	} else {
 		return (
 			<main>
 				<Dialog open={open} fullScreen TransitionComponent={Transition}>
-					<ProjectTemplate project={data} closeProject={toggleDialog} />
+					<ProjectTemplate project={project} closeProject={toggleDialog} />
 				</Dialog>
-
 				{/* <Drawer open={open} variant="persistent">
-          <ProjectTemplate />
-        </Drawer> */}
-
+		      <ProjectTemplate />
+		    </Drawer> */}
 				<Stack direction={"column"} gap={2} pb={20}>
 					{/* navbar */}
 					<Navbar />
-
 					{/* about project */}
 					<Box py={10}>
 						<Container maxWidth="lg">
@@ -118,7 +134,7 @@ const ProjectsPage = () => {
 						</Container>
 					</Box>
 
-					{/* projects */}
+					{/* dev projects */}
 					<Box>
 						<Container
 							sx={{
@@ -131,7 +147,7 @@ const ProjectsPage = () => {
 								<ProjectsBlock
 									data={{
 										header: "Developement",
-										content: data,
+										content: devProjects,
 									}}
 									openProject={toggleDialog}
 									setProject={setActiveProject}
@@ -140,7 +156,7 @@ const ProjectsPage = () => {
 						</Container>
 					</Box>
 
-					{/* designs */}
+					{/* design projects */}
 					<Box>
 						<Container
 							sx={{
@@ -150,14 +166,14 @@ const ProjectsPage = () => {
 							}}
 						>
 							<Container maxWidth="md" sx={{ padding: "0px !important" }}>
-								{/* <ResumeBlock
-                  data={{
-                    header: "Designs",
-                    content: designData,
-                  }}
-                  openProject={toggleDialog}
-                  setProject={setActiveProject}
-                /> */}
+								<ProjectsBlock
+									data={{
+										header: "Developement",
+										content: designProjects,
+									}}
+									openProject={toggleDialog}
+									setProject={setActiveProject}
+								/>
 							</Container>
 						</Container>
 					</Box>
