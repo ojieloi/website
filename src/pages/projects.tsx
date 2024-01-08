@@ -168,7 +168,7 @@ const ProjectsPage = () => {
 							<Container maxWidth="md" sx={{ padding: "0px !important" }}>
 								<ProjectsBlock
 									data={{
-										header: "Developement",
+										header: "Design",
 										content: designProjects,
 									}}
 									openProject={toggleDialog}

@@ -83,7 +83,7 @@ const ProjectsBlock = ({ openProject, data, setProject }) => {
 
 													{/* open external link */}
 													{index === activeStep ? (
-														<LightTooltip title="Open in new tab">
+														<LightTooltip title="More about this project">
 															<IconButton
 																variant="filledTonal"
 																onClick={() => {
@@ -143,7 +143,8 @@ const ProjectsBlock = ({ openProject, data, setProject }) => {
 												</div>
 											) : null}
 
-											<Box pt={item.content ? 5 : 0} px={item.content ? 2 : 0}>
+											{/* <Box pt={item.content ? 5 : 0} px={item.content ? 2 : 0}> */}
+											<Box mt={2}>
 												<div>
 													{/* go down */}
 													<LightTooltip

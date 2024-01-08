@@ -4,6 +4,9 @@ import "./project.css";
 import { Stack, Box, Container, IconButton, Typography } from "@mui/material";
 import { ChevronLeftRounded } from "@mui/icons-material";
 
+import { styled } from "@mui/material/styles";
+import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
+
 // framer
 import { ListItemVariants } from "../../framer-motion";
 import { motion } from "framer-motion";
@@ -20,6 +23,19 @@ const transition = {
 	stiffness: 120,
 };
 
+const LightTooltip = styled(({ className, ...props }) => (
+	<Tooltip {...props} classes={{ popper: className }} />
+))(({ theme }) => ({
+	[`& .${tooltipClasses.tooltip}`]: {
+		backgroundColor: theme.palette.common.white,
+		color: "rgba(0, 0, 0, 0.87)",
+		boxShadow: theme.shadows[1],
+		fontSize: "0.8rem",
+		fontFamily: "'Inter', sans-serif",
+		padding: "0.6rem 1rem",
+	},
+}));
+
 const ProjectTemplate = ({ closeProject, project }) => {
 	return (
 		<main>
@@ -29,14 +45,16 @@ const ProjectTemplate = ({ closeProject, project }) => {
 						{/* header */}
 						<Box pt={2}>
 							<Container>
-								<IconButton
-									variant="contained"
-									onClick={() => {
-										closeProject(false);
-									}}
-								>
-									<ChevronLeftRounded />
-								</IconButton>
+								<LightTooltip title="Back to projects">
+									<IconButton
+										onClick={() => {
+											closeProject(false);
+										}}
+										sx={{ ml: 1 }}
+									>
+										<ChevronLeftRounded />
+									</IconButton>
+								</LightTooltip>
 							</Container>
 						</Box>
 
