@@ -1,0 +1,9 @@
+.footer-social-link {
+  align-items: center;
+  border: 1px solid #e0e4e8;
+  border-radius: 50px;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}

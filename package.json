@@ -40,6 +40,7 @@
     "gatsby-plugin-styled-components": "^6.12.0",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-transformer-sharp": "^5.12.3",
+    "moment": "^2.30.1",
     "react": "^18.0.2",
     "react-dom": "^18.0.2",
     "react-helmet": "^6.1.0",

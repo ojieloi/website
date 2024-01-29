@@ -3,6 +3,8 @@ import "./resumeBlock.css";
 
 import { Colors } from "../../colors/colors";
 import { Box, Container, Stack, IconButton } from "@mui/material";
+import moment from "moment";
+
 import {
 	BodyText,
 	SubBodyHeaderText,
@@ -55,12 +57,17 @@ const ResumeBlock = ({ data }) => {
 		setActiveStep((prevActiveStep) => prevActiveStep - 1);
 	};
 
-	// open project in detail
-	const handleExternalClick = (url) => {
-		window.open(url, "_blank");
-	};
+  // format dates
+  const formatDate = (date) => {
+    let formattedDate = moment(date).format('MMM d, YYYY');
+    return formattedDate;
+  };
 
-	console.log(data);
+	// open project in detail
+	const handleExternalClick = (project) => {
+    const link = project.externalLink;
+		window.open(link, "_blank", "noreferrer");
+	};
 
 	return (
 		<Box py={20}>
@@ -109,9 +116,9 @@ const ResumeBlock = ({ data }) => {
 
 													{/* start - end dates */}
 													<SubBodyText color={Colors.brownBodyText} id="period">
-														{item.startDate ? item.startDate : null}
+														{item.startDate ? formatDate(item.startDate) : null}
 
-														{item.endDate ? ` - ${item.endDate}` : null}
+														{item.endDate ? ` - ${formatDate(item.endDate)}` : null}
 													</SubBodyText>
 												</div>
 											</div>
